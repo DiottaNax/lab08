@@ -65,9 +65,10 @@ public final class SimpleGUIWithFileChooser {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFileChooser browse = new JFileChooser();
+                final JFileChooser browse = new JFileChooser("So you like to change path uh?");
+                browse.setSelectedFile(myController.getFile());
                 try{
-                    switch(browse.showSaveDialog(null)){
+                    switch(browse.showSaveDialog(frame)){
                         case JFileChooser.APPROVE_OPTION:
                             myController.setCurrentFile(browse.getSelectedFile());
                             northTextField.setText(myController.getPath());
