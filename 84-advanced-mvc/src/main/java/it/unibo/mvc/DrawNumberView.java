@@ -24,4 +24,10 @@ public interface DrawNumberView {
      * @param res the result of the last draw
      */
     void result(DrawResult res);
+
+    /**
+     * 
+     * @param errMessage message of an error occurred during I/O access
+     */
+    void displayError(String errMessage);
 }

@@ -21,4 +21,10 @@ public interface DrawNumberViewObserver {
      * Gracefully quits from the application.
      */
     void quit();
+
+    /**
+     * 
+     * @param errMessage message of an error occurred during I/O access
+     */
+    void displayError(String errMessage);
 }
